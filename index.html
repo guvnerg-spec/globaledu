@@ -1,144 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>EduPlatform - Learn Anywhere</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Your Online Learning Hub</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-  <!-- Materialize CSS for modern styling -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+        }
 
-  <!-- Custom CSS for additional styles -->
-  <style>
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-    main {
-      flex: 1 0 auto;
-    }
-    .hero-section {
-      background: url('https://example.com/hero-image.jpg') no-repeat center center;
-      background-size: cover;
-      height: 70vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-    .hero-section h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .section-courses {
-      margin-top: 50px;
-    }
-    footer {
-      background-color: #00264d;
-      padding: 20px 0;
-      color: white;
-      text-align: center;
-    }
-  </style>
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        .login-btn {
+            background-color: #f0a500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+            height: 80vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+        }
+
+        .hero-content p {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .cta-btn {
+            background-color: #f0a500;
+            color: #333;
+            padding: 1rem 2rem;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .courses-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .course-card {
+            width: 30%;
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card button {
+            margin-top: 1rem;
+            background-color: #f0a500;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* About Us Section */
+        .about-section {
+            padding: 3rem 1rem;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .contact-section form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-section label,
+        input,
+        textarea,
+        button {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-
-  <!-- Navigation Bar -->
-  <nav class="blue darken-4">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">EduPlatform</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <h1>Learn from the Best</h1>
-      <p>Online Courses to Boost Your Skills</p>
-      <a href="#courses" class="btn-large waves-effect waves-light blue lighten-1">Explore Courses</a>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main>
-    <div class="container">
-      <!-- Courses Section -->
-      <div class="section-courses">
-        <h3 class="center-align">Popular Courses</h3>
-        <div class="row">
-          <!-- Card 1 -->
-          <div class="col s12 m6 l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://example.com/course1.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Web Development</span>
-                <p>Learn how to build websites from scratch with HTML, CSS, and JavaScript.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Enroll Now</a>
-              </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>EduLearn</h1>
             </div>
-          </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-          <!-- Card 2 -->
-          <div class="col s12 m6 l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://example.com/course2.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Data Science</span>
-                <p>Master Python and Machine Learning for data-driven decisions.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Enroll Now</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col s12 m6 l4">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://example.com/course3.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Digital Marketing</span>
-                <p>Learn how to grow your business with powerful marketing strategies.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">Enroll Now</a>
-              </div>
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h2>Empower Your Knowledge Anytime, Anywhere</h2>
+            <p>Join EduLearn, an innovative platform that helps you gain skills through interactive and engaging online
+                courses.</p>
+            <a href="#courses" class="cta-btn">Explore Courses</a>
         </div>
-      </div>
-    </div>
-  </main>
+    </section>
 
-  <!-- Footer -->
-  <footer class="blue darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <p>&copy; 2024 EduPlatform. All Rights Reserved.</p>
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <h2>Popular Courses</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, JavaScript, and build your own website.</p>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Master Python and machine learning techniques to analyze data.</p>
+                <button>Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <h3>Graphic Design</h3>
+                <p>Become an expert in Photoshop, Illustrator, and digital art.</p>
+                <button>Enroll Now</button>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Materialize JavaScript for interactive elements -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>EduLearn is an online learning platform dedicated to providing top-quality courses to learners around the
+            world. We bring you expert instructors, engaging content, and a vibrant community to support you in every
+            step of your learning journey.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial">
+            <p>"EduLearn changed my life! The Web Development course helped me secure my first job in tech."</p>
+            <span>- Alex R.</span>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing instructors and well-structured courses. I loved learning Data Science here!"</p>
+            <span>- Maria K.</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 EduLearn. All rights reserved. | <a href="https://flixai.net" target="_blank">Flixai</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Add smooth scroll behavior for links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
 
