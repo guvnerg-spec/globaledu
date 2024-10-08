@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EduPlatform - Learn Anywhere</title>
+
+  <!-- Materialize CSS for modern styling -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+  <!-- Custom CSS for additional styles -->
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+    .hero-section {
+      background: url('https://example.com/hero-image.jpg') no-repeat center center;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .section-courses {
+      margin-top: 50px;
+    }
+    footer {
+      background-color: #00264d;
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="blue darken-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">EduPlatform</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Learn from the Best</h1>
+      <p>Online Courses to Boost Your Skills</p>
+      <a href="#courses" class="btn-large waves-effect waves-light blue lighten-1">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- Courses Section -->
+      <div class="section-courses">
+        <h3 class="center-align">Popular Courses</h3>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://example.com/course1.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Web Development</span>
+                <p>Learn how to build websites from scratch with HTML, CSS, and JavaScript.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://example.com/course2.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Data Science</span>
+                <p>Master Python and Machine Learning for data-driven decisions.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://example.com/course3.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Digital Marketing</span>
+                <p>Learn how to grow your business with powerful marketing strategies.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="blue darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <p>&copy; 2024 EduPlatform. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JavaScript for interactive elements -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
 
